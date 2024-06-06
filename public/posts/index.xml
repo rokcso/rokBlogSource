@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on rok&#39;s Blog</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on rok&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 09 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何使用 JavaScript 配置 Umami Track Event</title>
+      <link>http://localhost:1313/posts/configure-umami-track-event-using-javascript/</link>
+      <pubDate>Wed, 09 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/configure-umami-track-event-using-javascript/</guid>
+      <description>post summary</description>
+    </item>
+    <item>
+      <title>语义化版本控制规范 2.0.0</title>
+      <link>http://localhost:1313/posts/semantic-version/</link>
+      <pubDate>Thu, 29 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/semantic-version/</guid>
+      <description>post summary</description>
+    </item>
+  </channel>
+</rss>

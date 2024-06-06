@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en-US"
+  dir="ltr">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width"><meta name="description" content="seo description" />
+
+<title>
+    
+    语义化版本控制规范 2.0.0 | rok&#39;s Blog
+    
+</title>
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.b357350626e456d3eb0a6cc6a6195c39ef417483bca875072ff17ad8b0c6db9c.css" media="all">
+
+
+
+  </head>
+
+  
+
+  
+  
+  
+
+  <body class="auto">
+
+    <div class="content">
+      <header>
+        
+
+<div class="header">
+    <h1 class="header-title">rok&#39;s Blog</h1>
+
+    <div class="flex">
+        
+
+        
+        
+        <p class="small ">
+            <a href="/">
+                /home
+            </a>
+        </p>
+        
+        <p class="small ">
+            <a href="/about">
+                /about
+            </a>
+        </p>
+        
+        
+    </div>
+
+</div>
+      </header>
+
+      <main class="main">
+        
+
+
+
+
+
+<div  class="autonumber" >
+
+  <div class="single-intro-container">
+
+    
+
+    <h1 class="single-title">语义化版本控制规范 2.0.0</h1>
+    
+
+    
+
+    <p class="single-readtime">
+      
+      
+      
+      <time datetime="2023-06-29T00:00:00&#43;00:00">June 29, 2023</time>
+      
+
+      
+      &nbsp; · &nbsp;
+      1 min read
+      
+    </p>
+
+  </div>
+
+  
+
+  
+
+  
+  <aside class="toc">
+    <p><strong>Table of contents</strong></p>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#规范重点摘要">规范重点摘要</a></li>
+    <li><a href="#版本优先级">版本优先级</a></li>
+    <li><a href="#其他提示">其他提示</a></li>
+  </ul>
+</nav>
+  </aside>
+  
+
+  
+
+  <div class="single-content">
+    <blockquote>
+<p>link: <a href="https://semver.org/lang/zh-CN/">语义化版本控制规范 2.0.0</a></p>
+</blockquote>
+<p>版本号格式：主版本号.次版本号.修订号</p>
+<p>版本号递增规则：</p>
+<ol>
+<li>主版本号：当有不向下兼容的功能发布时</li>
+<li>次版本号：当有可向下兼容的功能发布时</li>
+<li>修订号：当有可向下兼通的<strong>问题修正</strong>发布时</li>
+</ol>
+<p>注意：构建号与版本号不同，不受此规范约束。</p>
+<h2 id="规范重点摘要">规范重点摘要</h2>
+<ol>
+<li>标准的版本号必须使用 X.Y.Z 格式（对应 major.minor.patch），且 X、Y、Z 为非负整数，数字前方禁止补零（如 01 是不被允许的），禁止留白。范例：1.3.2、3.0.0 等等</li>
+<li>新版本号标记的内容发布后，禁止再使用该版本号发布任何内容，往后任何内容变更都必须新起一个版本号</li>
+<li>开发初始阶段（非稳定版），主版本号设定为零</li>
+<li>每当主版本号递增时，次版本号和修订号必须归零；每当次版本号递增时，修订号必须归零</li>
+<li>先行版本号（非稳定版）标注在正式版本号之后，使用「-」连接，先行版本号由 ASCII 字母、数字 [0-9A-Za-z] 以及分隔符英文句点「.」组成，数字前方禁止补零，禁止留白。范例：1.0.0-alpha、1.0.0-beta.1、1.0.0-0.2.1、1.0.0-x.7.a.13 等等</li>
+<li>版本编译信息标注在（正式或先行）版本号之后，使用「+」连接，版本编译信息标识符由 ASCII 字母、数字 [0-9A-Za-z] 以及分隔符英文句点「.」组成，禁止留白。范例：1.0.0+001、1.0.0-beta.1+sha.34f8h4 等等</li>
+</ol>
+<h2 id="版本优先级">版本优先级</h2>
+<ol>
+<li>排序时仅考虑主版本号、次版本号、修订号、先行版本号进行比较，版本编译信息不影响版本优先级</li>
+</ol>
+<p>注意：避免使用难以明确优先级的先行版本号。先行版本一般可使用 alpha &lt; beta &lt; rc 标识。</p>
+<h2 id="其他提示">其他提示</h2>
+<ol>
+<li>初始开发版本建议为 0.1.0</li>
+<li>当软件要被用于生产环境时就可以发布 1.0.0</li>
+<li>v2.3.1 不是一个语义化版本号，v 只是 version 的缩写，是版本号的标签</li>
+<li>检查语义化版本号正确性的正则表达式：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>^(?P&lt;major&gt;0|[1-9]<span style="">\</span>d*)<span style="">\</span>.(?P&lt;minor&gt;0|[1-9]<span style="">\</span>d*)<span style="">\</span>.(?P&lt;patch&gt;0|[1-9]<span style="">\</span>d*)(?:-(?P&lt;prerelease&gt;(?:0|[1-9]<span style="">\</span>d*|<span style="">\</span>d*[a-zA-Z-][0-9a-zA-Z-]*)(?:<span style="">\</span>.(?:0|[1-9]<span style="">\</span>d*|<span style="">\</span>d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:<span style="">\</span>+(?P&lt;buildmetadata&gt;[0-9a-zA-Z-]+(?:<span style="">\</span>.[0-9a-zA-Z-]+)*))?$
+</span></span></code></pre></div><p>Link: <a href="https://regex101.com/r/Ly7O1x/3/">https://regex101.com/r/Ly7O1x/3/</a></p>
+
+    
+  </div>
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+      </main>
+    </div>
+
+    <footer>
+      <p>Powered by
+    <a href="https://gohugo.io/">Hugo</a>
+    and
+    <a href="https://github.com/tomfran/typo">tomfran/typo</a>
+</p>
+
+
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false }
+      ]
+    });
+  });
+</script>
+
+    </footer>
+
+  </body>
+
+  <script>
+
+  function isAuto() {
+    return document.body.classList.contains("auto");
+  }
+
+  function setTheme() {
+    if (!isAuto()) {
+      return
+    }
+
+    document.body.classList.remove("auto");
+    let cls = "light";
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      cls = "dark";
+    }
+
+    document.body.classList.add(cls);
+  }
+
+  function invertBody() {
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
+  }
+
+  if (isAuto()) {
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(invertBody);
+  }
+
+  setTheme();
+
+</script>
+
+</html>

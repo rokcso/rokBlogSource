@@ -1,0 +1,105 @@
+baseURL = "https://blog.rokcso.com/"
+languageCode = "en-US"
+title = "rok's Blog"
+theme = "typo"
+
+# >>> params - Start <<<
+
+# All parameter configurations are after [params]
+# 所有参数配置都在 [params] 之后
+[params]
+
+# Meta description
+# 页面 description 元数据
+description = "这里是主页描述"
+
+# Show breadcrumbs
+# 是否展示面包屑（页面路径）
+breadcrumbs = false
+
+# Appearance settings, enumeration: auto | light | dark
+# 明暗主题，枚举：auto | light | dark
+theme = "auto"
+
+# >>> Homepage - Start <<<
+
+# Intro on main page, content is markdown
+# 首页的自我介绍，内容是 Markdown 格式
+homeIntroTitle = "Hi! 👋"
+homeIntroContent = """
+This is rokcso. I know a little about development and design. I build for myself first.
+"""
+
+# Collection to display on home
+# 在首页展示合集
+homeCollectionTitle = "Posts"
+homeCollection = "posts"
+
+# >>> Homepage - End <<<
+
+# >>> Collection - Start <<<
+
+# Maximum number of posts per page
+# 每页最大文章数
+paginationSize = 100
+
+# Date format
+# 日期格式
+listDateFormat = "2 Jan 2006"
+
+# Summary
+# 文章摘要
+listSummaries = false
+
+# >>> Collection - End <<<
+
+# Social icons
+# 社交媒体图标
+[[params.social]]
+name = "x"
+url = "https://x.com/rokcso/"
+
+[[params.social]]
+name = "github"
+url = "https://github.com/rokcso/"
+
+# Main menu pages
+# 首页菜单
+[[params.menu]]
+name = "home"
+url = "/"
+
+[[params.menu]]
+name = "about"
+url = "/about"
+
+# Giscus comments
+[params.giscus]
+enable = false
+repo = "user/repo"
+repoid = "repoId"
+category = "General"
+categoryid = "categoryId"
+mapping = "pathname"
+theme = "preferred_color_scheme"
+
+# >>> params - End <<<
+
+# >>> taxonomies - Start <<<
+
+[taxonomies]
+tag = 'tags'
+
+# Google analytics code
+googleAnalytics = "G-xxxxxxxxx"
+
+# >>> taxonomies - End <<<
+
+# >>> markup - Start <<<
+
+# Syntax highligth on code blocks
+[markup]
+[markup.highlight]
+style = 'algol'
+
+# >>> markup - End <<<
