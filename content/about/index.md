@@ -17,5 +17,3 @@ I'm **rokcso**, nice to meet you!
 本站评论已关闭，如有需要可[邮件](mailto:rokcsox@gmail.com?body=%0d%0a%0d%0a%0d%0afrom_rok's_Blog)交流联系。
 
 博客内容首发更新在 [Craft](https://rok.craft.me/index)，随后会同步到本博客。
-
-测试一下
