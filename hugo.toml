@@ -29,6 +29,8 @@ theme = "auto"
 homeIntroTitle = "Hi! 👋"
 homeIntroContent = """
 This is rokcso. I know a little about development and design. I build for myself first.
+
+nice to meet you!
 """
 
 # Collection to display on home
@@ -69,6 +71,10 @@ url = "https://github.com/rokcso/"
 [[params.menu]]
 name = "home"
 url = "/"
+
+[[params.menu]]
+name = "products"
+url = "/products"
 
 [[params.menu]]
 name = "about"

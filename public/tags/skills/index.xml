@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Skills on Rok&#39;s Blog</title>
-    <link>https://blog.rokcso.com/tags/skills/</link>
+    <link>http://localhost:1313/tags/skills/</link>
     <description>Recent content in Skills on Rok&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 07 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://blog.rokcso.com/tags/skills/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/skills/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>利用 URL Scheme 快速打开 Craft Daily Note</title>
-      <link>https://blog.rokcso.com/posts/craft-url-scheme/</link>
+      <link>http://localhost:1313/posts/craft-url-scheme/</link>
       <pubDate>Fri, 07 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://blog.rokcso.com/posts/craft-url-scheme/</guid>
+      <guid>http://localhost:1313/posts/craft-url-scheme/</guid>
       <description>在 Craft Help Center 可以查看 Craft 支持的所有 URL Scheme 方案。本文只分享其中「Access to Daily Notes」相关的内容。&#xA;Access to Daily Notes&#xA;Yesterday - craftdocs://openByQuery?query=yesterday&amp;amp;spaceId= Today - craftdocs://openByQuery?query=today&amp;amp;spaceId= Tomorrow - craftdocs://openByQuery?query=tomorrow&amp;amp;spaceId= 以上是 Craft 提供的支持快速打开 Craft Daily Note 的 URL Scheme，3 个 URL Scheme 的区别仅仅在于打开的 Daily Note 是昨天、今天还是明天。&#xA;配置 URL Scheme 参数 所有 URL Scheme 都需要提供一个 spaceId 参数，这个参数可以在 Craft 中任意一篇文档的 Deeplink 中获得。关于 Craft Deeplink 的介绍可以在 Craft Help Center 查看。&#xA;获取 Deeplink 路径/方法：&#xA;打卡任意一篇文档 点击「Share」 点击「Export as」 点击「Advanced」 点击「Copy Deeplink」 将复制到的 Deeplink 粘贴到某个文本编辑器，可以看到如下内容，其中 spaceId= 后面的内容就是我们需要的 spaceId 参数。</description>
     </item>
   </channel>

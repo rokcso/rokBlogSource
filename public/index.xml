@@ -2,39 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Rok&#39;s Blog</title>
-    <link>https://blog.rokcso.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content in Home on Rok&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 07 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://blog.rokcso.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>利用 URL Scheme 快速打开 Craft Daily Note</title>
-      <link>https://blog.rokcso.com/posts/craft-url-scheme/</link>
+      <link>http://localhost:1313/posts/craft-url-scheme/</link>
       <pubDate>Fri, 07 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://blog.rokcso.com/posts/craft-url-scheme/</guid>
+      <guid>http://localhost:1313/posts/craft-url-scheme/</guid>
       <description>在 Craft Help Center 可以查看 Craft 支持的所有 URL Scheme 方案。本文只分享其中「Access to Daily Notes」相关的内容。&#xA;Access to Daily Notes&#xA;Yesterday - craftdocs://openByQuery?query=yesterday&amp;amp;spaceId= Today - craftdocs://openByQuery?query=today&amp;amp;spaceId= Tomorrow - craftdocs://openByQuery?query=tomorrow&amp;amp;spaceId= 以上是 Craft 提供的支持快速打开 Craft Daily Note 的 URL Scheme，3 个 URL Scheme 的区别仅仅在于打开的 Daily Note 是昨天、今天还是明天。&#xA;配置 URL Scheme 参数 所有 URL Scheme 都需要提供一个 spaceId 参数，这个参数可以在 Craft 中任意一篇文档的 Deeplink 中获得。关于 Craft Deeplink 的介绍可以在 Craft Help Center 查看。&#xA;获取 Deeplink 路径/方法：&#xA;打卡任意一篇文档 点击「Share」 点击「Export as」 点击「Advanced」 点击「Copy Deeplink」 将复制到的 Deeplink 粘贴到某个文本编辑器，可以看到如下内容，其中 spaceId= 后面的内容就是我们需要的 spaceId 参数。</description>
     </item>
     <item>
       <title>如何使用 JavaScript 配置 Umami Track Event</title>
-      <link>https://blog.rokcso.com/posts/configure-umami-track-event-using-javascript/</link>
+      <link>http://localhost:1313/posts/configure-umami-track-event-using-javascript/</link>
       <pubDate>Wed, 09 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>https://blog.rokcso.com/posts/configure-umami-track-event-using-javascript/</guid>
+      <guid>http://localhost:1313/posts/configure-umami-track-event-using-javascript/</guid>
       <description>当前（2023-08-09）我的 umami 部署版本为 Version 1.40.0，官方已经发布版本为 Version 2.4.1&#xA;Umami Version 1.40 及以上版本支持 Tarck Event，即事件跟踪，简单的说就是可以跟踪用户在网页上面的事件操作，比如点击按钮。&#xA;在 官方文档 中提供了两种简单配置方案，根据当前（2023-08-09）文档显示可以通过给按钮添加数据属性或者使用 JavaScript 监听按钮的点击事件然后执行 umami.track() 方法上报事件数据。&#xA;调试方法：&#xA;按照官方文档提供的方案进行配置后，访问网页，打开 Chrome 开发者工具中的 Network，然后点击已经配置了 Track Event 的按钮，关注是否有新的名为 collect 的请求被发起，如果有，则关注 Request Payload 中传入的参数是否符合预期。 问题：&#xA;两种方案在我实践之后均无法成功上报数据，使用 JavaScript 方案时 Chrome 开发者工具 Console 中报错 umami.track is not a function，可能是由于我部署的 umami 版本不支持上述方案，&#xA;解决方案：&#xA;在不升级我部署的 umami 版本的基础上，我最终发现可以通过 JavaScript 监听按钮的点击事件然后执行 umami() 方法上报事件数据。&#xA;比如：&#xA;document.getElementById(&amp;#34;btn-copy&amp;#34;).onclick = () =&amp;gt; umami(&amp;#34;clickCopyBtn&amp;#34;); 除了使用 JavaScript 方案外，umami Version 1.40.0 应该还支持通过给按钮添加 Class 来配置 Track Event，类的命名格式要求为：</description>
     </item>
     <item>
       <title>语义化版本控制规范 2.0.0</title>
-      <link>https://blog.rokcso.com/posts/semantic-version/</link>
+      <link>http://localhost:1313/posts/semantic-version/</link>
       <pubDate>Thu, 29 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://blog.rokcso.com/posts/semantic-version/</guid>
+      <guid>http://localhost:1313/posts/semantic-version/</guid>
       <description>link: 语义化版本控制规范 2.0.0&#xA;版本号格式：主版本号.次版本号.修订号&#xA;版本号递增规则：&#xA;主版本号：当有不向下兼容的功能发布时 次版本号：当有可向下兼容的功能发布时 修订号：当有可向下兼通的问题修正发布时 注意：构建号与版本号不同，不受此规范约束。&#xA;规范重点摘要 标准的版本号必须使用 X.Y.Z 格式（对应 major.minor.patch），且 X、Y、Z 为非负整数，数字前方禁止补零（如 01 是不被允许的），禁止留白。范例：1.3.2、3.0.0 等等 新版本号标记的内容发布后，禁止再使用该版本号发布任何内容，往后任何内容变更都必须新起一个版本号 开发初始阶段（非稳定版），主版本号设定为零 每当主版本号递增时，次版本号和修订号必须归零；每当次版本号递增时，修订号必须归零 先行版本号（非稳定版）标注在正式版本号之后，使用「-」连接，先行版本号由 ASCII 字母、数字 [0-9A-Za-z] 以及分隔符英文句点「.」组成，数字前方禁止补零，禁止留白。范例：1.0.0-alpha、1.0.0-beta.1、1.0.0-0.2.1、1.0.0-x.7.a.13 等等 版本编译信息标注在（正式或先行）版本号之后，使用「+」连接，版本编译信息标识符由 ASCII 字母、数字 [0-9A-Za-z] 以及分隔符英文句点「.」组成，禁止留白。范例：1.0.0+001、1.0.0-beta.1+sha.34f8h4 等等 版本优先级 排序时仅考虑主版本号、次版本号、修订号、先行版本号进行比较，版本编译信息不影响版本优先级 注意：避免使用难以明确优先级的先行版本号。先行版本一般可使用 alpha &amp;lt; beta &amp;lt; rc 标识。&#xA;其他提示 初始开发版本建议为 0.1.0 当软件要被用于生产环境时就可以发布 1.0.0 v2.3.1 不是一个语义化版本号，v 只是 version 的缩写，是版本号的标签 检查语义化版本号正确性的正则表达式： ^(?P&amp;lt;major&amp;gt;0|[1-9]\d*)\.(?P&amp;lt;minor&amp;gt;0|[1-9]\d*)\.(?P&amp;lt;patch&amp;gt;0|[1-9]\d*)(?:-(?P&amp;lt;prerelease&amp;gt;(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+(?P&amp;lt;buildmetadata&amp;gt;[0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$ Link: https://regex101.com/r/Ly7O1x/3/</description>
     </item>
     <item>
-      <title>About</title>
-      <link>https://blog.rokcso.com/about/</link>
-      <pubDate>Tue, 03 Jan 2023 17:33:40 +0800</pubDate>
-      <guid>https://blog.rokcso.com/about/</guid>
-      <description>Hi there. 👋&#xA;I&amp;rsquo;m rokcso, nice to meet you!&#xA;有一只如狗一般的猫，叫岁岁，男孩。&#xA;最近在学习 SwiftUI，希望能开发一款 iOS 应用。&#xA;可能活跃在即刻、Twitter(X)、GitHub&#xA;本站评论已关闭，如有需要可邮件交流联系。&#xA;博客内容首发更新在 Craft，随后会同步到本博客。</description>
+      <title>About 🍩</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>Hi there. 👋&#xA;I&amp;rsquo;m rokcso, nice to meet you!&#xA;有一只如狗一般的猫，叫岁岁，男孩。&#xA;最近在学习 SwiftUI，希望能开发一款 iOS 应用。&#xA;可能活跃在 即刻、Twitter/X、GitHub&#xA;本站评论已关闭，如有需要可邮件交流联系。&#xA;博客内容首发更新在 Craft，不定时同步至本博客。</description>
+    </item>
+    <item>
+      <title>Products 🛠️</title>
+      <link>http://localhost:1313/products/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/products/</guid>
+      <description>盘搜 VIP 人工亲测精选的网盘搜索工具导航。&#xA;Z-Lib One Find all available Z-Library websites in one place.&#xA;URLxcode Online URL Encode/Decode Tool.&#xA;Feishu Document Creator A Raycast extension. Create Feishu/Lark online document quickly using native Feishu/Lark URLs.</description>
     </item>
   </channel>
 </rss>
