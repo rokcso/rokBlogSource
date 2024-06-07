@@ -6,14 +6,42 @@
     <description>Recent content in Posts on Rok&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 19 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Jun 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我的 macOS 初始化配置方案 &amp; 软件分享</title>
+      <link>http://localhost:1313/posts/macos-setup/</link>
+      <pubDate>Fri, 07 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/macos-setup/</guid>
+      <description>系统偏好设置 触控板 开启「轻点来点按」 系统偏好设置 → 触控板 → 光标与点按 → 轻点来点按 开启「使用触控板进行拖移」 系统偏好设置 → 辅助功能 → 指针控制 → 触控板选项 → 使用触控板进行拖移 关闭「轻扫切换页面」 系统偏好设置 → 触控板 → 更多手势 → 轻扫切换页面 软件安装 &amp;amp; 配置 ClashX Pro 安装包在阿里云盘&#xA;Homebrew Link: https://brew.sh/&#xA;搜索 Homebrew 支持的包：https://formulae.brew.sh/&#xA;Raycast Link: https://www.raycast.com/&#xA;Install:&#xA;brew install --cask raycast Raycast 扩展程序：&#xA;Brew Color Picker Feishu Document Creator QR Code Generator Random Data Generator 坚果云 Link: https://www.jianguoyun.com/&#xA;Install:&#xA;brew install --cask nutstore KeePassXC Link: https://keepassxc.</description>
+    </item>
+    <item>
+      <title>macOS 彻底阻止 FigmaAgent.app 被添加到登录项</title>
+      <link>http://localhost:1313/posts/macos-block-figmaagent.app-auto-login/</link>
+      <pubDate>Mon, 03 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/macos-block-figmaagent.app-auto-login/</guid>
+      <description>我的 macOS 版本：Sonoma 14.5&#xA;在使用 Figma macOS 客户端时，总有一个 FigmaAgent.app 被自动添加到登录项，即使在「系统设置 - 通用 - 登录项」中手动删除该项目，再次打开 Figma 依然会自动添加，这很烦人。😡&#xA;解决方案 打开「活动监视器」，找到 FigmaAgent，选中后点击「停止（退出）」后选择「强制退出」。 访问「系统设置 - 通用 - 登录项」，删除 FigmaAgent.app。 打开「访达」，进入 ~/Library/Application Support/Figma 文件夹，删除 FigmaAgent.app。 打开「访达」，进入 /Applications/Figma.app/Contents/Library 文件夹，删除 FigmaAgent.app。 完成！✅</description>
+    </item>
+    <item>
+      <title>dofollow &amp; nofollow</title>
+      <link>http://localhost:1313/posts/dofollow-and-nofollow/</link>
+      <pubDate>Mon, 27 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/dofollow-and-nofollow/</guid>
+      <description>什么是 dofollow 和 nofollow 链接？ dofollow 和 nofollow 是两个 HTML 属性，用于指示搜索引擎爬虫如何处理网页上面 link 的链接。&#xA;dofollow 意味着搜索引擎会跟随这个链接，并且当前页面会传递一定的权重给被链接的页面，即增加被链接页面在搜索引擎中的权重，增加权重的多少根据当前页面在搜索引擎中的权重不同而不同。&#xA;也就是说如果网站 A 使用 dofollow 链接了网站 B 的链接，网站 B 在搜索引擎中的权重会得到提升，提升的多少由网站 A 在搜索引擎中的权重决定，即网站 A 在搜索引擎中权重越大，网站 B 得到的权重提升也越大。&#xA;nofollow 是由 Google 引入的属性，目的是帮助网站管理员减少网站的垃圾链接，当页面中的一个链接被标记为 nofollow 时，搜索引擎爬虫将不会跟随这个链接去发现新的内容、建立新的索引，同时也也不会从当前页面传递任何权重到被链接页面。搜索引擎的爬虫甚至不会进一步爬取 nofollow 链接。&#xA;一般网站的广告链接、用户评论内容中的链接会使用 nofollow 属性来标记。&#xA;HTML 中 标签默认的属性是 dofollow，如果要标记为 nofollow 可以如下编写：&#xA;&amp;lt;a href=&amp;#34;https://rokcso.com&amp;#34; rel=&amp;#34;nofollow&amp;#34;&amp;gt;Rokcso&amp;#39;s Landing Page&amp;lt;/a&amp;gt; 如何正确应用 dofollow 和 nofollow 链接？ 上面提到的权重本质上就是 PageRank（也被称为 PR 值），是搜索引擎排名的重要指标之一。PR 值只能通过 dofollow 链接传递，不能通过 nofollow 链接传递。&#xA;并且 PR 值的分配是根据页面上搜索链接来平均分配的，不论这个链接是否允许 follow，比如当前页面的 PR 值为 10，页面中有 10 个链接（5 个 dofollow 和 5 个 nofollow），那么每个 dofollow 链接将分别获得 1 PR 值传递，而不是 2；该页面的 10 PR 值被平均分给了该页面中的所有 10 个链接，只是其中标记为 nofollow 的链接不会获得对应的 PR 值传递。</description>
+    </item>
+    <item>
+      <title>Mac 删除系统自带的 ABC 输入法</title>
+      <link>http://localhost:1313/posts/macos-remove-abc/</link>
+      <pubDate>Tue, 21 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/macos-remove-abc/</guid>
+      <description>以下操作均在 macOS Sonoma 14.3 上进行，不确定其他 macOS 系统是否适用。 但看网上文章即使是其他 macOS 系统大多也都成功了。&#xA;原理：要删除 macOS 自带的 ABC 输入法，本质上就是要删除对应的配置。&#xA;macOS 的配置文件基本都是以 .plist 为后缀的文件，而输入法相关的配置都存储在 com.apple.HIToolbox.plist 这个系统配置文件中，该配置文件主要负责存储与用户界面相关的配置，比如：输入设备、键盘布局、鼠标设置、触控板手势等等。&#xA;💡 提示：打开/修改 .plist 文件需要使用 Xcode 或者 PlistEdit Pro 软件。&#xA;⚠️ 注意：通常不建议普通用户随意修改系统 .plist 文件，这可能会影响系统的稳定性和安全性。&#xA;关闭/开启 SIP 在修改系统配置文件之前，需要先关闭系统完整性保护（SIP），SIP 的主要目的是保护系统文件和目录，防止它们被未经授权的修改，这种保护措施甚至对 Root 用户也有效。&#xA;⚠️ 注意：SIP 默认开启，如需关闭 SIP 以修改一些系统配置文件，也非常建议完成修改之后重启 SIP。&#xA;如何确定是否已经关闭/开启 SIP？&#xA;打开终端，输入 csrutil status 命令，回车执行该命令，终端将显示一条消息来提示 SIP 状态，比如：System Integrity Protection status: enabled 。&#xA;关闭/开启 SIP 的详细步骤：&#xA;重启 Mac，重启过程中持续按住 Command + R ，进入恢复模式 进入恢复模式后，打开终端（路径：顶部菜单栏 - 实用工具 - 终端） 输入 csrutil disable 命令，回车执行该命令 完成步骤 3 后，如果一切正常，终端将显示一条消息来提示 SIP 已经禁用，并提示重启 Mac，根据提示操作即可。</description>
+    </item>
     <item>
       <title>NuPhy Air75 V2 使用指南</title>
       <link>http://localhost:1313/posts/nuphy-air75-v2-use-guide/</link>
       <pubDate>Sun, 19 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/nuphy-air75-v2-use-guide/</guid>
-      <description>使用手册 在线版本：NuPhy Air75 V2 Quick Guide&#xA;PDF 文件：&#xA;NuPhy_Air75_V2_Quick_Guide.pdf&#xA;常见问题 😅 设备连接/切换 关于无限连接切换设备、蓝牙匹配、2.4G 连接等操作，使用 FN 键加**::数字键::** 1~4，而不是 FN 键加 F1～F4。&#xA;键盘自动休眠模式 开启键盘自动休眠模式后，若键盘连续 6 分钟没有任何操作，将进入休眠模式（键盘背光关闭）。&#xA;注：自动休眠时间默认 6 分钟，暂时不清楚如何自定义这个自动休眠时间。&#xA;使用快捷键 FN + ] 开关键盘自动休眠模式，按下 FN + ] 后，如果键盘右上角 RGB 灯条闪烁 3 次红灯，意味着关闭自动休眠模式，如果闪烁 3 次绿灯，意味着开启自动休眠模式。&#xA;更新固件 准备 安装 QMK Toolbox 前往 GitHub QMK Toolbox 仓库下载对应操作系统的软件。&#xA;macOS 可以使用 Homebrew 进行安装：&#xA;brew install qmk-toolbox ⚠️ 注意：QMK Toolbox 似乎还没有专门为 M 芯片（ARM 架构）的 Mac 提供适配。&#xA;我的 M1 Mac 使用 Homebrew 安装的 QMK Toolbox 在后续 Flash 固件时会提示 The operation couldn’t be completed.</description>
+      <description>使用手册 在线版本：NuPhy Air75 V2 Quick Guide&#xA;PDF 文件：&#xA;NuPhy_Air75_V2_Quick_Guide.pdf&#xA;常见问题 😅 设备连接/切换 关于无限连接切换设备、蓝牙匹配、2.4G 连接等操作，使用 FN 键加**::数字键::** 1~4，而不是 FN 键加 F1～F4。&#xA;键盘自动休眠模式 开启键盘自动休眠模式后，若键盘连续 6 分钟没有任何操作，将进入休眠模式（键盘背光关闭）。&#xA;注：自动休眠时间默认 6 分钟，暂时不清楚如何自定义这个自动休眠时间。&#xA;使用快捷键 FN + ] 开关键盘自动休眠模式，按下 FN + ] 后，如果键盘右上角 RGB 灯条闪烁 3 次红灯，意味着关闭自动休眠模式，如果闪烁 3 次绿灯，意味着开启自动休眠模式。&#xA;更新固件 准备 安装 QMK Toolbox 前往 GitHub QMK Toolbox 仓库 下载对应操作系统的软件。&#xA;macOS 可以使用 Homebrew 进行安装：&#xA;brew install qmk-toolbox ⚠️ 注意：QMK Toolbox 似乎还没有专门为 M 芯片（ARM 架构）的 Mac 提供适配。&#xA;我的 M1 Mac 使用 Homebrew 安装的 QMK Toolbox 在后续 Flash 固件时会提示 The operation couldn’t be completed.</description>
     </item>
     <item>
       <title>利用 URL Scheme 快速打开 Craft Daily Note</title>
