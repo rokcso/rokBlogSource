@@ -4,7 +4,7 @@ date: "2023-06-29"
 draft: false
 slug: "semantic-version"
 summary: ""
-tags: ["笔记"]
+tags: ["note"]
 description: "seo description"
 toc: true
 readTime: true

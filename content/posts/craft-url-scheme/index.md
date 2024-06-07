@@ -1,11 +1,11 @@
 ---
 title: "利用 URL Scheme 快速打开 Craft Daily Note"
-date: 2024-06-07
+date: "2024-05-08"
 draft: false
 slug: "craft-url-scheme"
 summary: ""
-tags: ["skills"]
-description: "seo description"
+tags: ["skill"]
+description: ""
 toc: true
 readTime: true
 autonumber: true

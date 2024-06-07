@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en-US"
+  dir="ltr">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width"><meta name="description" content="" />
+
+<title>
+    
+    NuPhy Air75 V2 使用指南 | Rok&#39;s Blog
+    
+</title>
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.b357350626e456d3eb0a6cc6a6195c39ef417483bca875072ff17ad8b0c6db9c.css" media="all">
+
+
+
+  </head>
+
+  
+
+  
+  
+  
+
+  <body class="auto">
+
+    <div class="content">
+      <header>
+        
+
+<div class="header">
+    <h1 class="header-title">Rok&#39;s Blog</h1>
+
+    <div class="flex">
+        
+
+        
+        
+        <p class="small ">
+            <a href="/">
+                /home
+            </a>
+        </p>
+        
+        <p class="small ">
+            <a href="/products">
+                /products
+            </a>
+        </p>
+        
+        <p class="small ">
+            <a href="/about">
+                /about
+            </a>
+        </p>
+        
+        
+    </div>
+
+</div>
+      </header>
+
+      <main class="main">
+        
+
+
+
+
+
+<div  class="autonumber" >
+
+  <div class="single-intro-container">
+
+    
+
+    <h1 class="single-title">NuPhy Air75 V2 使用指南</h1>
+    
+
+    
+
+    <p class="single-readtime">
+      
+      
+      
+      <time datetime="2024-05-19T00:00:00&#43;00:00">May 19, 2024</time>
+      
+
+      
+      &nbsp; · &nbsp;
+      1 min read
+      
+    </p>
+
+  </div>
+
+  
+
+  
+
+  
+  <aside class="toc">
+    <p><strong>Table of contents</strong></p>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#使用手册">使用手册</a></li>
+    <li><a href="#常见问题-">常见问题 😅</a>
+      <ul>
+        <li><a href="#设备连接切换">设备连接/切换</a></li>
+        <li><a href="#键盘自动休眠模式">键盘自动休眠模式</a></li>
+      </ul>
+    </li>
+    <li><a href="#更新固件">更新固件</a>
+      <ul>
+        <li><a href="#准备">准备</a></li>
+        <li><a href="#更新">更新</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+  
+
+  
+
+  <div class="single-content">
+    <h2 id="使用手册">使用手册</h2>
+<p>在线版本：<a href="https://cdn.shopify.com/s/files/1/0268/7297/1373/files/NuPhy_Air75_V2_Quick_Guide.pdf?v=1696498123">NuPhy Air75 V2 Quick Guide</a></p>
+<p>PDF 文件：</p>
+<p><a href="https://res.craft.do/user/full/e9983e66-9ce7-993a-ad36-dd817783b2b8/doc/BFC1BDA6-E7C9-4C83-9F50-404CCF177E6F/0E45A28A-42AE-4A5B-86BE-8C8E4B901979_2/lSkGpxqEst7cyCttPjsyWbTpZza6FwWKTySMxrGO0Msz/NuPhy_Air75_V2_Quick_Guide.pdf">NuPhy_Air75_V2_Quick_Guide.pdf</a></p>
+<h2 id="常见问题-">常见问题 😅</h2>
+<h3 id="设备连接切换">设备连接/切换</h3>
+<p>关于无限连接切换设备、蓝牙匹配、2.4G 连接等操作，使用 FN 键加**::数字键::** 1~4，而不是 FN 键加 F1～F4。</p>
+<h3 id="键盘自动休眠模式">键盘自动休眠模式</h3>
+<p>开启键盘自动休眠模式后，若键盘连续 6 分钟没有任何操作，将进入休眠模式（键盘背光关闭）。</p>
+<p>注：自动休眠时间默认 6 分钟，暂时不清楚如何自定义这个自动休眠时间。</p>
+<p>使用快捷键 <code>FN + ]</code> 开关键盘自动休眠模式，按下 <code>FN + ]</code> 后，如果键盘右上角 RGB 灯条闪烁 3 次红灯，意味着关闭自动休眠模式，如果闪烁 3 次绿灯，意味着开启自动休眠模式。</p>
+<h2 id="更新固件">更新固件</h2>
+<h3 id="准备">准备</h3>
+<ol>
+<li>安装 QMK Toolbox</li>
+</ol>
+<p>前往 <a href="https://github.com/qmk/qmk_toolbox">GitHub QMK Toolbox 仓库</a> 下载对应操作系统的软件。</p>
+<p>macOS 可以使用 Homebrew 进行安装：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install qmk-toolbox
+</span></span></code></pre></div><p>⚠️ 注意：QMK Toolbox 似乎还没有专门为 M 芯片（ARM 架构）的 Mac 提供适配。</p>
+<p>我的 M1 Mac 使用 Homebrew 安装的 QMK Toolbox 在后续 Flash 固件时会提示 <code>The operation couldn’t be completed. Bad CPU type in executable</code> ，最终固件更新失败。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div>
+        <img loading="lazy" alt="alt text" src=" image.png">
+    </div>
+
+    
+</figure></p>
+<p>而通过 QMK Toolbox Installer 安装的 QMK Toolbox 则能成功 Flash 固件，不会提示 CPU 类型异常。 可能是由于 M 芯片的 Mac 在通过 QMK Toolbox Installer 安装 Intel 程序时会要求安装 Rosetta，而 Rosetta 可以让 Intel 程序在 M 芯片上更好的运行。</p>
+<ol start="2">
+<li>下载固件</li>
+</ol>
+<p>前往 <a href="https://nuphy.com/pages/qmk-firmwares">Nuphy 固件发布页面</a> 下载对应键盘型号的固件。注：固件文件后缀为 <code>.bin</code> 。</p>
+<h3 id="更新">更新</h3>
+<ol>
+<li>打开 QMK Toolbox</li>
+</ol>
+<p>
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div>
+        <img loading="lazy" alt="alt text" src=" image-1.png">
+    </div>
+
+    
+</figure></p>
+<ol start="2">
+<li>点击「Open」选择已下载好的固件文件</li>
+</ol>
+<p>
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div>
+        <img loading="lazy" alt="alt text" src=" image-2.png">
+    </div>
+
+    
+</figure></p>
+<ol start="3">
+<li>将 Nuphy Air75 V2 切换到有线连接模式，按住 ESC 键然后再插入 USB-C 以连接键盘和电脑</li>
+</ol>
+<p>⚠️ 注意：这一步操作的顺序非常重要，先断开键盘和电脑的连接，然后按住 ESC 键的同时插入 USB-C 来连接键盘和电脑。</p>
+<p>当 QMK Toolbox 显示如图中黄色文本（提示设备已连接）时则意味着键盘已经成功连接。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div>
+        <img loading="lazy" alt="alt text" src=" image-3.png">
+    </div>
+
+    
+</figure></p>
+<ol start="4">
+<li>点击「Flash」开始更新固件</li>
+</ol>
+<p>⚠️ 注意：更新的过程中千万、一定、绝对不要断开键盘和电脑的有线连接。</p>
+<p>如果一切正常，QMK Toolbox 会开始执行一系列 Erase 和 Download，当固件更新完成，QMK Toolbox 会主动断开和键盘的连接。</p>
+<p>当 QMK Toolbox 显示如图中最后一行黄色文本（Flash complete）即意味着固件更新完成。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div>
+        <img loading="lazy" alt="alt text" src=" image-4.png">
+    </div>
+
+    
+</figure></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div>
+        <img loading="lazy" alt="alt text" src=" image-5.png">
+    </div>
+
+    
+</figure></p>
+<h1 id="使用-via-配置键盘">使用 VIA 配置键盘</h1>
+<blockquote>
+<p>Link: <a href="https://nuphy.com/pages/via-usage-guide-for-nuphy-keyboards">https://nuphy.com/pages/via-usage-guide-for-nuphy-keyboards</a></p>
+</blockquote>
+
+    
+  </div>
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+      </main>
+    </div>
+
+    <footer>
+      <p>
+    Copyright &copy; 2024 <a href="https://rokcso.com/">rokcso</a>🍩, 
+    Powered by
+    <a href="https://gohugo.io/">Hugo</a>
+    and
+    <a href="https://github.com/tomfran/typo">typo</a> theme.
+</p>
+    
+
+
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false }
+      ]
+    });
+  });
+</script>
+
+    </footer>
+
+  </body>
+
+  <script>
+
+  function isAuto() {
+    return document.body.classList.contains("auto");
+  }
+
+  function setTheme() {
+    if (!isAuto()) {
+      return
+    }
+
+    document.body.classList.remove("auto");
+    let cls = "light";
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      cls = "dark";
+    }
+
+    document.body.classList.add(cls);
+  }
+
+  function invertBody() {
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
+  }
+
+  if (isAuto()) {
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(invertBody);
+  }
+
+  setTheme();
+
+</script>
+
+</html>
