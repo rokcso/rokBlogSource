@@ -2,55 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://blog.rokcso.com/</loc>
+    <lastmod>2024-06-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.rokcso.com/posts/</loc>
+    <lastmod>2024-06-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.rokcso.com/tags/skill/</loc>
+    <lastmod>2024-06-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.rokcso.com/tags/</loc>
+    <lastmod>2024-06-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.rokcso.com/posts/cryptomator/</loc>
+    <lastmod>2024-06-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.rokcso.com/posts/macos-setup/</loc>
     <lastmod>2024-06-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-06-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/skill/</loc>
-    <lastmod>2024-06-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-06-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/macos-setup/</loc>
-    <lastmod>2024-06-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/macos-block-figmaagent.app-auto-login/</loc>
+    <loc>https://blog.rokcso.com/posts/macos-block-figmaagent.app-auto-login/</loc>
     <lastmod>2024-06-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/dofollow-and-nofollow/</loc>
+    <loc>https://blog.rokcso.com/posts/dofollow-and-nofollow/</loc>
     <lastmod>2024-05-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/seo/</loc>
+    <loc>https://blog.rokcso.com/tags/seo/</loc>
     <lastmod>2024-05-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/macos-remove-abc/</loc>
+    <loc>https://blog.rokcso.com/posts/macos-remove-abc/</loc>
     <lastmod>2024-05-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/nuphy-air75-v2-use-guide/</loc>
+    <loc>https://blog.rokcso.com/posts/nuphy-air75-v2-use-guide/</loc>
     <lastmod>2024-05-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/craft-url-scheme/</loc>
+    <loc>https://blog.rokcso.com/posts/craft-url-scheme/</loc>
     <lastmod>2024-05-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/configure-umami-track-event-using-javascript/</loc>
+    <loc>https://blog.rokcso.com/posts/configure-umami-track-event-using-javascript/</loc>
     <lastmod>2023-08-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://blog.rokcso.com/tags/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2023-08-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/note/</loc>
+    <loc>https://blog.rokcso.com/tags/note/</loc>
     <lastmod>2023-06-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/semantic-version/</loc>
+    <loc>https://blog.rokcso.com/posts/semantic-version/</loc>
     <lastmod>2023-06-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://blog.rokcso.com/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/g-xxxxxxxxx/</loc>
+    <loc>https://blog.rokcso.com/g-xxxxxxxxx/</loc>
   </url><url>
-    <loc>http://localhost:1313/products/</loc>
+    <loc>https://blog.rokcso.com/products/</loc>
   </url>
 </urlset>

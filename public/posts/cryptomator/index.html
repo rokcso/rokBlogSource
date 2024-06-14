@@ -8,7 +8,7 @@
 
 <title>
     
-    利用 URL Scheme 快速打开 Craft Daily Note | Rok&#39;s Blog
+    使用 Cryptomator 加密云同步文件 | Rok&#39;s Blog
     
 </title>
 
@@ -82,7 +82,7 @@
 
     
 
-    <h1 class="single-title">利用 URL Scheme 快速打开 Craft Daily Note</h1>
+    <h1 class="single-title">使用 Cryptomator 加密云同步文件</h1>
     
 
     
@@ -91,7 +91,7 @@
       
       
       
-      <time datetime="2024-05-08T00:00:00&#43;00:00">May 8, 2024</time>
+      <time datetime="2024-06-14T00:00:00&#43;00:00">June 14, 2024</time>
       
 
       
@@ -111,8 +111,7 @@
     <p><strong>Table of contents</strong></p>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#配置-url-scheme-参数">配置 URL Scheme 参数</a></li>
-    <li><a href="#快速访问-url">快速访问 URL</a></li>
+    <li><a href="#安装-crytomator-以及-fuse-t">安装 Crytomator 以及 FUSE-T</a></li>
   </ul>
 </nav>
   </aside>
@@ -121,28 +120,18 @@
   
 
   <div class="single-content">
-    <p>在 <a href="https://support.craft.do/hc/en-us/articles/360020168838-Using-URL-Scheme">Craft Help Center</a> 可以查看 Craft 支持的所有 URL Scheme 方案。本文只分享其中「Access to Daily Notes」相关的内容。</p>
+    <p><a href="https://cryptomator.org/">Cryptomator</a> 是一个<strong>开源</strong>的数据加密程序，主要用于将云同步的数据进行加密以保护数据安全，当然不进行云同步的数据也可以使用其进行加密。</p>
+<p>云同步或者云数据存储服务提供的数据加密通常只是对本地到云端的传输过程进行加密，已经传输到云服务的数据本质上是可以被有权限的用户随意访问的。</p>
+<p>Cryptomator 可以创建一个文件夹然后对该文件夹进行加密，该文件夹可以看作一个加密仓库，对于有保密需求的文件可以放入该文件夹后将该文件夹上传至云服务。</p>
+<h2 id="安装-crytomator-以及-fuse-t">安装 Crytomator 以及 FUSE-T</h2>
+<p>Crytomator 针对 macOS 系统提供了 Intel 芯片和 M 芯片版本的程序，而不同芯片版本的程序都还需要安装不同的文件系统框架。Crytomator 会基于文件系统框架来进行一系列自定义文件系统操作，以实现文件加密。</p>
+<p>而对于 Intel 芯片，需要使用 <a href="https://osxfuse.github.io/">macFUSE</a> 框架，M 芯片则使用 <a href="https://www.fuse-t.org/">FUSE-T</a> 框架。</p>
 <blockquote>
-<p><strong>Access to Daily Notes</strong></p>
-<ul>
-<li><strong>Yesterday</strong> - craftdocs://openByQuery?query=yesterday&amp;spaceId=<!-- raw HTML omitted --></li>
-<li><strong>Today</strong> - craftdocs://openByQuery?query=today&amp;spaceId=<!-- raw HTML omitted --></li>
-<li><strong>Tomorrow</strong> - craftdocs://openByQuery?query=tomorrow&amp;spaceId=<!-- raw HTML omitted --></li>
-</ul>
+<p>我的设备是 M 芯片，后文基于该条件演示。</p>
 </blockquote>
-<p>以上是 Craft 提供的支持快速打开 Craft Daily Note 的 URL Scheme，3 个 URL Scheme 的区别仅仅在于打开的 Daily Note 是昨天、今天还是明天。</p>
-<h2 id="配置-url-scheme-参数">配置 URL Scheme 参数</h2>
-<p>所有 URL Scheme 都需要提供一个 <code>spaceId</code> 参数，这个参数可以在 Craft 中任意一篇文档的 Deeplink 中获得。关于 Craft Deeplink 的介绍可以在 <a href="https://support.craft.do/hc/en-us/articles/360020043878-How-to-link-into-a-specific-place-in-Craft-with-a-Deeplink">Craft Help Center</a> 查看。</p>
-<p>获取 Deeplink 路径/方法：</p>
-<ol>
-<li>打卡任意一篇文档</li>
-<li>点击「Share」</li>
-<li>点击「Export as」</li>
-<li>点击「Advanced」</li>
-<li>点击「Copy Deeplink」</li>
-</ol>
-<p>将复制到的 Deeplink 粘贴到某个文本编辑器，可以看到如下内容，其中 <code>spaceId=</code> 后面的内容就是我们需要的 <code>spaceId</code> 参数。</p>
-<p>⚠️ 注意：是 <code>spaceId=</code> 之后的内容，不包括 <code>spaceId=</code> 这几个字符。</p>
+<p>推荐使用 <a href="https://brew.sh/">Homebrew</a> 安装 FUSE-T，安装命令：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install macos-fuse-t/homebrew-cask/fuse-t
+</span></span></code></pre></div><p>安装好文件系统框架后下载、安装 Crytomator，打开 Crytomator 选择「添加」-「新保险库」。</p>
 <p>
 
 
@@ -162,8 +151,8 @@
 
     
 </figure></p>
-<p>以打开 Today Daily Note 为例，使用上面获取到的 Deeplink 中的 spaceId 替换 Craft 提供的 URL Scheme 中的 <code>&lt;spaceId&gt;</code> ，结果如下：</p>
-<p>⚠️ 注意：是将 <code>&lt;spaceId&gt;</code> 完整替换掉，包括 <code>&lt;</code> 、<code>&gt;</code> 这样的字符。</p>
+<p>随后根据提示输入保险库名称、存储位置（可以选择云同步服务的本地同步文件夹）、设置密码（生成恢复密钥）。</p>
+<p>至此这个加密保险库就已经创建完成，然后可以使用刚刚设置的密码来打开密码库。此时可能会报错：</p>
 <p>
 
 
@@ -183,7 +172,7 @@
 
     
 </figure></p>
-<p>这就是一段完整的、可用的 URL Scheme，现在只需要访问该 URL（就像访问 <a href="https://www.rokcso.com">https://www.rokcso.com</a> 一样）就能直接打开 Craft Today Daily Note。比如直接在浏览器地址栏输入该 URL 然后回车。</p>
+<p>根据提示，我们需要在「保险库选项」-「挂载」中修改卷类型，如果是 M 芯片需要修改为 FUSE-T 类型（并且需要安装 FUSE-T 文件系统框架）。</p>
 <p>
 
 
@@ -203,8 +192,8 @@
 
     
 </figure></p>
-<h2 id="快速访问-url">快速访问 URL</h2>
-<p>为了让访问该 URL 这个动作更便捷，我使用 Raycast 的 Quicklinks 功能，配置一个名为「Today Craft」的 Quicklink 来快捷访问该 URL，并给该 Quicklink 配置了一个别名（Alias）。</p>
+<p>然后重启 Crytomator 后重新尝试解锁保险库，即可解锁成功。</p>
+<p>解锁成功后进入 Finder 即可看到挂载成功的保险库（效果类似于插入了一个 U 盘），所有放入该保险库的文件都会被加密。</p>
 <p>
 
 
@@ -224,8 +213,6 @@
 
     
 </figure></p>
-<p><strong>最终效果</strong>：不论在任何 App、任何窗口、任何页面中，只需唤起 Raycast 然后输入「tc」，点击回车，即可直达 Craft Today Daily Note。</p>
-<p>注：如果给 Today Craft 这个 Quicklink 配置一个快捷键，那么不论在任何 App、任何窗口、任何页面中，只需要按下该快捷键，即可直达 Craft Today Daily Note。</p>
 
     
   </div>
